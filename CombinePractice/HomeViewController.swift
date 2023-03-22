@@ -18,12 +18,12 @@ final class HomeViewController: UIViewController {
         
         let data = Datas(number: 20)
         
-        data.$number
+        data.objectWillChange
             .sink { print("value = \($0)") }
             .store(in: &subscription)
         
         data.number = 10
-        data.number = 1
+        data.number = -1
     }
 }
 

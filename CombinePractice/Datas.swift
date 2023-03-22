@@ -7,9 +7,11 @@
 
 import Combine
 
-final class Datas {
+final class Datas: ObservableObject {
     // MARK: - Properties
-    @Published var number: Int
+    var number: Int {
+        willSet { self.objectWillChange.send() }
+    }
     
     // MARK: - Init
     init(number: Int) {
