@@ -16,14 +16,18 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Just(1)
-            .sink { print("Just: \($0)") }
+        Publishers.Sequence<[Int], Never>(sequence: [1, 2, 3])
+            .sink(
+                receiveCompletion: { print("receiveCompletion: \($0)") },
+                receiveValue: { print("receiveValue: \($0)") }
+              )
         
-        Just((1, 2, 3))
-            .sink { print("Just: \($0)") }
-        
-        Just([1, 2, 3])
-            .sink { print("Just: \($0)") }
+        [4, 5, 6].publisher
+            .sink(
+                receiveCompletion: { print("receiveCompletion: \($0)") },
+                receiveValue: { print("receiveValue: \($0)") }
+              )
+
     }
 }
 
