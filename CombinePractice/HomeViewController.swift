@@ -16,17 +16,10 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data = Datas(number: 20)
+        let publisher = [1, 2, 3].publisher
         
-        let anyCancellable = data.$number
-            .sink { print($0) }
-        
-        data.number = 1
-        data.number = -20
-        
-        anyCancellable.cancel()
-        data.number = 100
-        data.number = 1000000
+        publisher
+            .sink { print("data: \($0)") }
     }
 }
 
