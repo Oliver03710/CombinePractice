@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		AD50BC2329CB1573001895AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2229CB1573001895AF /* AppDelegate.swift */; };
 		AD50BC2529CB1573001895AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2429CB1573001895AF /* SceneDelegate.swift */; };
-		AD50BC2729CB1573001895AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2629CB1573001895AF /* ViewController.swift */; };
+		AD50BC2729CB1573001895AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2629CB1573001895AF /* HomeViewController.swift */; };
 		AD50BC2C29CB1574001895AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD50BC2B29CB1574001895AF /* Assets.xcassets */; };
 		AD50BC2F29CB1574001895AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD50BC2D29CB1574001895AF /* LaunchScreen.storyboard */; };
 		AD50BC3A29CB1574001895AF /* CombinePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC3929CB1574001895AF /* CombinePracticeTests.swift */; };
 		AD50BC4429CB1574001895AF /* CombinePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC4329CB1574001895AF /* CombinePracticeUITests.swift */; };
 		AD50BC4629CB1574001895AF /* CombinePracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC4529CB1574001895AF /* CombinePracticeUITestsLaunchTests.swift */; };
+		AD50BC5429CB182E001895AF /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC5329CB182E001895AF /* Datas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 		AD50BC1F29CB1573001895AF /* CombinePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombinePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD50BC2229CB1573001895AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD50BC2429CB1573001895AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD50BC2629CB1573001895AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD50BC2629CB1573001895AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AD50BC2B29CB1574001895AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD50BC2E29CB1574001895AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD50BC3029CB1574001895AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		AD50BC3F29CB1574001895AF /* CombinePracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinePracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD50BC4329CB1574001895AF /* CombinePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePracticeUITests.swift; sourceTree = "<group>"; };
 		AD50BC4529CB1574001895AF /* CombinePracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AD50BC5329CB182E001895AF /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 			children = (
 				AD50BC2229CB1573001895AF /* AppDelegate.swift */,
 				AD50BC2429CB1573001895AF /* SceneDelegate.swift */,
-				AD50BC2629CB1573001895AF /* ViewController.swift */,
+				AD50BC2629CB1573001895AF /* HomeViewController.swift */,
+				AD50BC5329CB182E001895AF /* Datas.swift */,
 				AD50BC2B29CB1574001895AF /* Assets.xcassets */,
 				AD50BC2D29CB1574001895AF /* LaunchScreen.storyboard */,
 				AD50BC3029CB1574001895AF /* Info.plist */,
@@ -254,9 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD50BC2729CB1573001895AF /* ViewController.swift in Sources */,
+				AD50BC2729CB1573001895AF /* HomeViewController.swift in Sources */,
 				AD50BC2329CB1573001895AF /* AppDelegate.swift in Sources */,
 				AD50BC2529CB1573001895AF /* SceneDelegate.swift in Sources */,
+				AD50BC5429CB182E001895AF /* Datas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
