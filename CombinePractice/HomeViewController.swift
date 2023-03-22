@@ -17,9 +17,8 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         let publisher = [1, 2, 3].publisher
-        
-        publisher
-            .sink { print("data: \($0)") }
+        let subscriber = CustomSubscriber()
+        publisher.subscribe(subscriber)
     }
 }
 
