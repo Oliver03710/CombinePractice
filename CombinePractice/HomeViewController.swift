@@ -16,9 +16,14 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let publisher = [1, 2, 3].publisher
-        let subscriber = CustomSubscriber()
-        publisher.subscribe(subscriber)
+        Just(1)
+            .sink { print("Just: \($0)") }
+        
+        Just((1, 2, 3))
+            .sink { print("Just: \($0)") }
+        
+        Just([1, 2, 3])
+            .sink { print("Just: \($0)") }
     }
 }
 
