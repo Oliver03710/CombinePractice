@@ -16,11 +16,13 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Empty<String, Never>()
-            .sink (
-                receiveCompletion: { print("receiveCompletion: \($0)") },
-                receiveValue: { print("receiveValue: \($0)") }
-            )
+        Deferred {
+            Just(1)
+        }
+        .sink(
+            receiveCompletion: { print("receiveCompletion: \($0)") },
+            receiveValue: { print("receiveValue: \($0)") }
+        )
         
     }
 }
