@@ -16,24 +16,23 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let subscriber = AnySubscriber<Int, Never>(
-            receiveSubscription: { sub in
-                print("receiveSubscription: \(sub)")
-            },
-            receiveValue: { v1 in
-                print("receiveValue: \(v1)")
-                return .max(1)
-            },
-            receiveCompletion: { _ in
-                print("receiveCompletion")
-            }
-        )
+        let subject = PassthroughSubject<String, Never>()
         
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-            .publisher
-            .subscribe(subscriber)
+        subject
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscription)
         
+        subject.send("dddd")
+        subject.send("\(123123123)")
         
+        let subject2 = CurrentValueSubject<String, Never>("Current")
+        
+        subject2
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscription)
+        
+        subject2.send("Next")
+        subject2.send("Next 2")
     }
 }
 
