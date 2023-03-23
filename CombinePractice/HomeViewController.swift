@@ -16,18 +16,12 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Future<Int, Never> { promise in
-            promise(.success(1))
-        }
-        .sink { print($0) }
+        Empty<String, Never>()
+            .sink (
+                receiveCompletion: { print("receiveCompletion: \($0)") },
+                receiveValue: { print("receiveValue: \($0)") }
+            )
         
-        var number = 0
-        let futureTester = FutureTester()
-        futureTester.execute(100)
-            .sink(receiveCompletion: { print($0) },
-                  receiveValue: { number = $0 })
-        
-        print(number)
     }
 }
 
