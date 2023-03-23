@@ -16,13 +16,23 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Deferred {
-            Just(1)
-        }
-        .sink(
-            receiveCompletion: { print("receiveCompletion: \($0)") },
-            receiveValue: { print("receiveValue: \($0)") }
+        let subscriber = AnySubscriber<Int, Never>(
+            receiveSubscription: { sub in
+                print("receiveSubscription: \(sub)")
+            },
+            receiveValue: { v1 in
+                print("receiveValue: \(v1)")
+                return .max(1)
+            },
+            receiveCompletion: { _ in
+                print("receiveCompletion")
+            }
         )
+        
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            .publisher
+            .subscribe(subscriber)
+        
         
     }
 }
