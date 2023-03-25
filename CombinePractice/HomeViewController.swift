@@ -16,10 +16,26 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let publisher1 = [1, 2, 3].publisher
-        let cancellable1 = publisher1
-            .map { $0 + 2 }
-            .sink(receiveValue: { print($0) })
+        let publisher = [2, 1, 0].publisher
+        
+        let cancellable = publisher
+            .tryMap {
+                guard $0 != 0 else { throw CustomError.zero }
+                return 10 / $0
+            }
+            .sink(
+                receiveCompletion: { result in
+                    switch result {
+                    case let .failure(error):
+                        print("failure: \(error)")
+                    case .finished:
+                        print("finished")
+                    }
+                },
+                receiveValue: { value in
+                    print(value)
+                }
+            )
     }
 }
 

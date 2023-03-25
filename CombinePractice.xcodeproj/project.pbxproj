@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4D3FC029CEC06100E15268 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4D3FBF29CEC06100E15268 /* CustomError.swift */; };
 		AD50BC2329CB1573001895AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2229CB1573001895AF /* AppDelegate.swift */; };
 		AD50BC2529CB1573001895AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2429CB1573001895AF /* SceneDelegate.swift */; };
 		AD50BC2729CB1573001895AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC2629CB1573001895AF /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD4D3FBF29CEC06100E15268 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		AD50BC1F29CB1573001895AF /* CombinePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombinePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD50BC2229CB1573001895AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD50BC2429CB1573001895AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				AD50BC2429CB1573001895AF /* SceneDelegate.swift */,
 				AD50BC2629CB1573001895AF /* HomeViewController.swift */,
 				AD50BC5329CB182E001895AF /* Datas.swift */,
+				AD4D3FBF29CEC06100E15268 /* CustomError.swift */,
 				AD50BC5529CB30DA001895AF /* CustomSubscriber.swift */,
 				AD50BC5729CB36F8001895AF /* FutureTester.swift */,
 				AD50BC2B29CB1574001895AF /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4D3FC029CEC06100E15268 /* CustomError.swift in Sources */,
 				AD50BC2729CB1573001895AF /* HomeViewController.swift in Sources */,
 				AD50BC5829CB36F8001895AF /* FutureTester.swift in Sources */,
 				AD50BC2329CB1573001895AF /* AppDelegate.swift in Sources */,
