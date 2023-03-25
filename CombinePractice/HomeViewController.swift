@@ -16,9 +16,13 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [1, 10, 100]
+        [1, 10, 100, 0]
             .publisher
-            .reduce(10, { $0 + $1 })
+            .tryReduce(0, {
+                guard $1 != 0 else { throw CustomError.zero }
+                return $0 / $1
+            })
+            .catch { _ in Just(-1) }
             .sink { print($0) }
             .store(in: &subscription)
     }
