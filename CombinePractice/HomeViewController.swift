@@ -19,16 +19,11 @@ final class HomeViewController: UIViewController {
         let publisher = [1, nil, 100].publisher
         
         let cancellable = publisher
-            .tryScan(0) { try self.handleSomeValue(lhs: $0, rhs: $1) }
+            .setFailureType(to: CustomError.self)
             .sink(
-                receiveCompletion: { print("receiveCompletion: \($0)") },
-                receiveValue: { print("receiveValue: \($0)") }
+                receiveCompletion: { print($0) },
+                receiveValue: { print($0) }
             )
-    }
-    
-    func handleSomeValue(lhs: Int?, rhs: Int?) throws -> Int {
-        guard let lhs, let rhs else { throw NilError.isNil }
-        return lhs + rhs
     }
 }
 
