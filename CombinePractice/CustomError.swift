@@ -8,5 +8,10 @@
 import Foundation
 
 enum CustomError: Error {
-  case zero
+    case zero
+    case other
+}
+
+enum GeneralError: Error {
+    case first
 }

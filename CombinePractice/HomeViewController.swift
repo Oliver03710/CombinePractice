@@ -19,13 +19,26 @@ final class HomeViewController: UIViewController {
         let publisher = [2, 1, 0].publisher
         
         let cancellable = publisher
-            .flatMap { value -> AnyPublisher<Int, Never> in
-                Future { promise in
-                    promise(.success(value + 10))
+            .tryMap { try divideValue($0) }
+            .mapError { _ in return GeneralError.first }
+            .sink(
+                receiveCompletion: { result in
+                    switch result {
+                    case let .failure(error):
+                        print("failure: \(error)")
+                    case .finished:
+                        print("finished")
+                    }
+                },
+                receiveValue: { value in
+                    print(value)
                 }
-                .eraseToAnyPublisher()
-            }
-            .sink(receiveValue: { print($0) } )
+            )
+        
+        func divideValue(_ value: Int) throws -> Int {
+            guard value != 0 else { throw CustomError.zero }
+            return 10 / value
+        }
     }
 }
 
