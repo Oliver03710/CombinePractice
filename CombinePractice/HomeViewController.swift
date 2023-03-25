@@ -16,9 +16,9 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [1, 2, Optional(3), 4]
+        [1, 2, 2, 3, 4]
             .publisher
-            .compactMap { $0 }
+            .removeDuplicates()
             .sink(receiveValue: { print($0) })
             .store(in: &subscription)
     }
