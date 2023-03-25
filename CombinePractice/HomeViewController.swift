@@ -16,17 +16,10 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        (0...10)
+        [1, 10, 100]
             .publisher
-            .tryFilter({ num in
-                guard num != 0 else { throw CustomError.other }
-                return num < 20
-            })
-            .ignoreOutput()
-            .sink(
-                receiveCompletion: { print("completion: \($0)") },
-                receiveValue: { print("value \($0)") }
-            )
+            .reduce(10, { $0 + $1 })
+            .sink { print($0) }
             .store(in: &subscription)
     }
 }
