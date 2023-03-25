@@ -16,17 +16,10 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        [1,2,3,-3,4]
+        (0...10)
             .publisher
-            .tryMap {
-                if $0 == -3 {
-                    throw CustomError.other
-                } else {
-                    return $0
-                }
-            }
-            .replaceError(with: 100)
-            .sink(receiveValue: { print($0) })
+            .collect(6)
+            .sink { print($0) }
             .store(in: &subscription)
     }
 }
