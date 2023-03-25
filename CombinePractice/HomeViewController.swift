@@ -16,14 +16,12 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let publisher = [1, nil, 100].publisher
+        let publisher = [1, 2, 3, 4].publisher
         
-        let cancellable = publisher
-            .setFailureType(to: CustomError.self)
-            .sink(
-                receiveCompletion: { print($0) },
-                receiveValue: { print($0) }
-            )
+        publisher
+            .filter { $0 % 2 == 0 }
+            .sink(receiveValue: { print($0) })
+            .store(in: &subscription)
     }
 }
 
