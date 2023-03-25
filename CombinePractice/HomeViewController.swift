@@ -16,10 +16,10 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let publisher = [2, nil, 0].publisher
+        let publisher = [1, 10, 100].publisher
         
         let cancellable = publisher
-            .replaceNil(with: -1)
+            .scan(10, { $0 + $1 })
             .sink { print($0) }
     }
 }
