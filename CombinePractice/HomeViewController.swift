@@ -18,8 +18,15 @@ final class HomeViewController: UIViewController {
         
         (0...10)
             .publisher
-            .collect(6)
-            .sink { print($0) }
+            .tryFilter({ num in
+                guard num != 0 else { throw CustomError.other }
+                return num < 20
+            })
+            .ignoreOutput()
+            .sink(
+                receiveCompletion: { print("completion: \($0)") },
+                receiveValue: { print("value \($0)") }
+            )
             .store(in: &subscription)
     }
 }
