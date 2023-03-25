@@ -16,11 +16,19 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let publisher = [1, 10, 100].publisher
+        let publisher = [1, nil, 100].publisher
         
         let cancellable = publisher
-            .scan(10, { $0 + $1 })
-            .sink { print($0) }
+            .tryScan(0) { try self.handleSomeValue(lhs: $0, rhs: $1) }
+            .sink(
+                receiveCompletion: { print("receiveCompletion: \($0)") },
+                receiveValue: { print("receiveValue: \($0)") }
+            )
+    }
+    
+    func handleSomeValue(lhs: Int?, rhs: Int?) throws -> Int {
+        guard let lhs, let rhs else { throw NilError.isNil }
+        return lhs + rhs
     }
 }
 

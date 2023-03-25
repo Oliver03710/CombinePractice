@@ -15,3 +15,7 @@ enum CustomError: Error {
 enum GeneralError: Error {
     case first
 }
+
+enum NilError: Error {
+    case isNil
+}
