@@ -19,6 +19,7 @@
 		AD50BC5429CB182E001895AF /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC5329CB182E001895AF /* Datas.swift */; };
 		AD50BC5629CB30DA001895AF /* CustomSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC5529CB30DA001895AF /* CustomSubscriber.swift */; };
 		AD50BC5829CB36F8001895AF /* FutureTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD50BC5729CB36F8001895AF /* FutureTester.swift */; };
+		ADF4F75429DB0DF100CD3DA8 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4F75329DB0DF100CD3DA8 /* UIControl+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AD50BC5329CB182E001895AF /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		AD50BC5529CB30DA001895AF /* CustomSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSubscriber.swift; sourceTree = "<group>"; };
 		AD50BC5729CB36F8001895AF /* FutureTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureTester.swift; sourceTree = "<group>"; };
+		ADF4F75329DB0DF100CD3DA8 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +110,9 @@
 				AD50BC2229CB1573001895AF /* AppDelegate.swift */,
 				AD50BC2429CB1573001895AF /* SceneDelegate.swift */,
 				AD50BC2629CB1573001895AF /* HomeViewController.swift */,
-				AD50BC5329CB182E001895AF /* Datas.swift */,
-				AD4D3FBF29CEC06100E15268 /* CustomError.swift */,
-				AD50BC5529CB30DA001895AF /* CustomSubscriber.swift */,
-				AD50BC5729CB36F8001895AF /* FutureTester.swift */,
+				ADF4F75729DB0FAE00CD3DA8 /* Extensions */,
+				ADF4F75529DB0F7600CD3DA8 /* Models */,
+				ADF4F75629DB0F8B00CD3DA8 /* Custom Components */,
 				AD50BC2B29CB1574001895AF /* Assets.xcassets */,
 				AD50BC2D29CB1574001895AF /* LaunchScreen.storyboard */,
 				AD50BC3029CB1574001895AF /* Info.plist */,
@@ -134,6 +135,32 @@
 				AD50BC4529CB1574001895AF /* CombinePracticeUITestsLaunchTests.swift */,
 			);
 			path = CombinePracticeUITests;
+			sourceTree = "<group>";
+		};
+		ADF4F75529DB0F7600CD3DA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD50BC5329CB182E001895AF /* Datas.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADF4F75629DB0F8B00CD3DA8 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD4D3FBF29CEC06100E15268 /* CustomError.swift */,
+				AD50BC5529CB30DA001895AF /* CustomSubscriber.swift */,
+				AD50BC5729CB36F8001895AF /* FutureTester.swift */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
+		ADF4F75729DB0FAE00CD3DA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4F75329DB0DF100CD3DA8 /* UIControl+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +296,7 @@
 				AD4D3FC029CEC06100E15268 /* CustomError.swift in Sources */,
 				AD50BC2729CB1573001895AF /* HomeViewController.swift in Sources */,
 				AD50BC5829CB36F8001895AF /* FutureTester.swift in Sources */,
+				ADF4F75429DB0DF100CD3DA8 /* UIControl+Extension.swift in Sources */,
 				AD50BC2329CB1573001895AF /* AppDelegate.swift in Sources */,
 				AD50BC2529CB1573001895AF /* SceneDelegate.swift in Sources */,
 				AD50BC5429CB182E001895AF /* Datas.swift in Sources */,
